@@ -84,7 +84,7 @@ function weatherforcast(lat, lon, Api_key) {
     });
 }
 
-function storeWeatherData(day1, day3, day3, day4, day5, day6, cityN) {
+function storeWeatherData(day1, day2, day3, day4, day5, day6, cityN) {
 
   hourlyUpdate.innerHTML = '';
   days_5_container.innerHTML = ""
@@ -179,6 +179,7 @@ function storeWeatherData(day1, day3, day3, day4, day5, day6, cityN) {
   humidity.innerHTML = humidity_rep
   sealevel.innerHTML = sea_level
 
+  // ! *****************************************************
 
   for (let i = 0; i < 5; i++) {
     let container = document.createElement("div")
@@ -192,7 +193,7 @@ function storeWeatherData(day1, day3, day3, day4, day5, day6, cityN) {
     let span2_child = document.createElement("span")
     let p3 = document.createElement("p")
     let span3_child = document.createElement("span")
-    
+
 
     container.className = "day_5_forecast"
     child1.className = "day_5_logo"
@@ -210,7 +211,7 @@ function storeWeatherData(day1, day3, day3, day4, day5, day6, cityN) {
     p3.appendChild(span3_child)
     child1.appendChild(img)
     child2.appendChild(p1)
-    child3.append(p2,p3)
+    child3.append(p2, p3)
     container.append(child1, child2, child3)
     days_5_container.append(container)
   }
@@ -240,10 +241,10 @@ function storeWeatherData(day1, day3, day3, day4, day5, day6, cityN) {
 
   // ! ****8
 
-  let date2,title1;
+  let date2, title1;
   let temp1 = 0
 
-  day3.forEach((ele) => {
+  day2.forEach((ele) => {
     title1 = ele.weather.describe;
     date2 = ele.date;
     temp1 += ele.temp_min;
@@ -281,13 +282,13 @@ function storeWeatherData(day1, day3, day3, day4, day5, day6, cityN) {
   }
 
   day_date1.innerHTML = date2.split("-").reverse().join("-")
-  day_temp1.innerHTML = (temp1/day3.length).toFixed(2)
+  day_temp1.innerHTML = (temp1 / day2.length).toFixed(2)
   day_title1.innerHTML = title1
-  
 
-// !!!!1
 
-  let date3,title2;
+  // !!!!1
+
+  let date3, title2;
   let temp2 = 0
 
   day3.forEach((ele) => {
@@ -328,13 +329,13 @@ function storeWeatherData(day1, day3, day3, day4, day5, day6, cityN) {
   }
 
   day_date2.innerHTML = date3.split("-").reverse().join("-")
-  day_temp2.innerHTML = (temp2/day3.length).toFixed(2)
+  day_temp2.innerHTML = (temp2 / day3.length).toFixed(2)
   day_title2.innerHTML = title2
-  
+
 
   // ! ********************************
 
-  let date4,title3;
+  let date4, title3;
   let temp3 = 0
 
   day4.forEach((ele) => {
@@ -375,11 +376,11 @@ function storeWeatherData(day1, day3, day3, day4, day5, day6, cityN) {
   }
 
   day_date3.innerHTML = date4.split("-").reverse().join("-")
-  day_temp3.innerHTML = (temp3/day4.length).toFixed(2)
+  day_temp3.innerHTML = (temp3 / day4.length).toFixed(2)
   day_title3.innerHTML = title3
 
   // ! *******************************************
-  let date5,title4;
+  let date5, title4;
   let temp4 = 0
 
   day5.forEach((ele) => {
@@ -420,12 +421,12 @@ function storeWeatherData(day1, day3, day3, day4, day5, day6, cityN) {
   }
 
   day_date4.innerHTML = date5.split("-").reverse().join("-")
-  day_temp4.innerHTML = (temp4/day5.length).toFixed(2)
+  day_temp4.innerHTML = (temp4 / day5.length).toFixed(2)
   day_title4.innerHTML = title4
 
   // ! *******************************************
 
-  let date6,title5;
+  let date6, title5;
   let temp5 = 0
 
   day6.forEach((ele) => {
@@ -466,7 +467,7 @@ function storeWeatherData(day1, day3, day3, day4, day5, day6, cityN) {
   }
 
   day_date5.innerHTML = date6.split("-").reverse().join("-")
-  day_temp5.innerHTML = (temp5/day6.length).toFixed(2)
+  day_temp5.innerHTML = (temp5 / day6.length).toFixed(2)
   day_title5.innerHTML = title5
 
   // ! *******************************************
