@@ -1,139 +1,370 @@
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-:root{
-  --element-color1: #f5f5f5;
+:root {
+  --element-color1: #012005;
+  --element-color2: #808080;
+  --element-color3: #00bfff;
+  --element-color4: #d9f5f5;
+  --element-color5: #00bfff;
+  --element-color6: #00bfff;
+  --element-color7: #242727d5;
+
+
+
 }
 
-li{
+li {
   list-style: none;
-};
+}
 
-a{
+a {
   text-decoration: none;
 }
 
-span{
+span {
   display: inline-block;
 }
 
-button{
+button {
   cursor: pointer;
+  opacity: 80%;
+  transition: opacity .3s linear;
 }
 
-.main_container{
-  width: 600px;
-  height: 700px;
-  margin: 100px auto;
-  box-shadow: 1px 2px 3px deepskyblue, -1px -2px 3px gray;
-  border-radius: 8px;
-  background-image: url("asset/assest_05.jpeg");
-  background-size:90vw;
-  background-position: -0px;
-  background-repeat: no-repeat;
+button:hover {
+  opacity: 100%;
+}
 
-  .child1{
-    width: 550px;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+.main_container {
+  width: 1800px;
+  height: 820px;
+  margin: 40px auto;
+  /* border: 1px solid red; */
+  background-color: white;
+  /* background-image: url("asset/assest_03.jpg"); */
+  background-color: lightblue;
+  background-size: cover;
 
-    input{
-      width: 60%;
-      border: none;
-      outline: 1px solid #a2a2f8ad;
-      padding-left: 30px;
-      font-size: 16px;
-      border-radius: 8px;
-      color: #808023;
-      height: 40px;
-    }
-    button{
-      width: 20%;
-      height: 40px;
-      border: none;
-      border-radius: 8px;
-      font-size: 20px;
-      background-color: darkcyan;
-      color: white;
-    }
-  }
-  .child2{
+  .child1 {
+    margin: 20px auto;
+    width: 1400px;
+    height: 100px;
+    /* border: 1px solid red; */
+    background-image: linear-gradient(120deg, skyblue 600px, white 40px);
     display: flex;
-    justify-content: center;
-    /* border: 1px solid red; */
-    width: 94%;
-    height: 70px;
-    margin: auto;
-    h1{
-      text-transform: capitalize;
-      font-weight: 400;
-      font-size: 48px;
-      color: transparent;
-      display: inline-block;
-      background-clip: text;
-      background-image: linear-gradient(120deg,red,darkblue,black);
-    }
-  }
-  .child3{
-    /* border: 1px solid red; */
-    width: 94%;
-    margin: auto;
-    height: 300px;
-    display: none;
     align-items: center;
-    overflow-x: scroll;
-    cursor: pointer;
-    div{
+    justify-content: center;
+
+    .item1_element1 {
+      width: 736px;
+      height: 56px;
+      outline: 1px solid var(--element-color4);
+      border-radius: 8px 0px 0px 8px;
+      display: flex;
+      overflow: hidden;
+
+      input {
+        width: 680px;
+        height: 56px;
+        padding-left: 40px;
+        text-transform: capitalize;
+        font-size: 18px;
+        border: none;
+        opacity: 80%;
+        background-color: var(--element-color4);
+        color: cal(--element-color2);
+      }
+
+      input:focus {
+        opacity: 100%;
+        outline: none;
+        background-color: #fff;
+      }
+
+      button {
+        height: 56px;
+        width: 56px;
+        outline: 1px solid var(--element-color4);
+        border: none;
+        background-color: #e2f3f0;
+
+        span {
+          width: 40px;
+          height: 40px;
+          background-image: url(asset/assest_09.svg);
+
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+
+    button:hover {
+      background-color: #fff;
+    }
+
+  }
+
+  .child2 {
+    width: 1600px;
+    height: 660px;
+    margin: auto;
+    /* border: 1px solid red; */
+    background-image: url("asset/assest_04.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .child2_item1 {
+      width: 1100px;
+      height: 620px;
       /* border: 1px solid red; */
-      width: 260px;
-      height: 280px;
-      flex-shrink: 0;
-      margin-left: 20px;
-      border-radius: 8px;
-      background-image: linear-gradient(120deg,darkblue,skyblue);
 
-      h3{
-        font-weight:500;
-        color:var(--element-color1);
-        text-align: center;
-        font-size: 28px;
-        margin-top: 20px;
-      }
-      img{
-        width: 75px;
-        display: block;
-        margin: auto;
-      }
-      p{
-        text-align: center;
+      .item1_element1 {
+        width: 1000px;
+        height: 66px;
+        margin: 10px auto;
         /* border: 1px solid red; */
-        margin-bottom: 20px;
-        height: 26px;
-        font-size: 20px;
-        color:lightcyan;
-        font-weight: 500;
+        display: flex;
+        background-color: black;
+        justify-content: space-around;
+        align-items: center;
+
+        h1 {
+          /* border: 1px solid red; */
+          font-weight: 400;
+          display: flex;
+          width: auto;
+          height: 56px;
+          font-size: 24px;
+          color: white;
+          padding: 0px 20px 0px 40px;
+          text-transform: capitalize;
+          align-items: center;
+          /* justify-content: space-evenly; */
+
+        }
+        .sky_logo{
+            width: 40px;
+            height: 40px;
+            /* border: 1px solid red; */
+            margin: 2px 10px 0px 20px;
+            background-image: url("./asset/assest_21.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
       }
 
-      span{
-        width: 120px;
-        font-size: 16px;
-        height: 40px;
-        text-align: center;
-        margin: 4px;
-        color: white;
-        font-weight: 600;
-        letter-spacing: 1px;
+      .item1_element2 {
+        width: 1000px;
+        height: 490px;
+        margin: 10px auto;
+        border: 1px solid black;
+        border-radius: 8px;
+        box-shadow: 1px 2px 3px;
+        background-color: #ffffff7e;
+
+
+        ul {
+          width: 700px;
+          margin: 10px auto;
+          height: 56px;
+          /* border: 1px solid red; */
+          display: flex;
+          justify-content: space-around;
+          background-color: #408c75b2;
+          align-items: center;
+
+          li {
+            font-size: 20px;
+            color: white;
+            text-shadow: 1px 1px 1px rgb(0, 87, 158);
+          }
+        }
+
+        .element2_child1 {
+          width: 980px;
+          height: 380px;
+          margin: auto;
+          /* border: 1px solid red; */
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+
+          .element2_child1_item1 {
+            width: 250px;
+            height: 300px;
+            /* border: 1px solid red; */
+            background-color: rgba(147, 242, 245, 0.644);
+
+            h2 {
+              /* border: 1px solid red; */
+              text-align: center;
+              font-weight: 600;
+              background-color: #fff;
+              margin: 2px;
+              color: #00bfff;
+            }
+
+            .wind {
+              width: 220px;
+              height: 240px;
+              display: flex;
+              flex-direction: column;
+              background-color: #ffffffea;
+              align-items: baseline;
+
+              li {
+                margin-left: 10px;
+                font-size: 18px;
+                font-weight: 600;
+                color: #1a5374;
+                text-shadow: 1px 1px 1px white;
+
+                span{
+                  color: #012005;
+                }
+              }
+
+            }
+
+          }
+
+          .element2_child1_item2 {
+            width: 700px;
+            height: 300px;
+            box-shadow: 1px 1px 3px #1fe9bd inset, -1px -1px 3px #1fe9bd inset;
+            background-color: #ffffff98;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            overflow-x: scroll;
+
+            .hourlyData {
+              width: 220px;
+              height: 280px;
+              cursor: pointer;
+              margin-left: 20px;
+              /* border: 1px solid red; */
+              border-radius: 2px;
+              transition: all .2s linear;
+              display: flex;
+              flex-direction: column;
+              padding: 8px;
+              align-items: center;
+              color: white;
+              justify-content: center;
+              /* background-color: #20b2ab67; */
+              box-shadow: 1px 1px 2px gray;
+              background-color: #3d90ee96;
+
+
+
+              h3,
+              h2 {
+                width: 180px;
+                height: 40px;
+                /* border: 1px solid red; */
+                text-align: center;
+                font-weight: 500;
+                display: flex;
+                color: white;
+                justify-content: center;
+                background-color: #408c75;
+                align-items: center;
+                border-bottom: 1px solid gray;
+              }
+
+              h2{
+                font-size: 14px;
+              }
+
+              img {
+                width: 140px;
+                height: 140px;
+                margin-top: 20px;
+                /* border: 1px solid red; */
+
+              }
+            }
+
+            .hourlyData:hover {
+              transform: scale(.95);
+            }
+          }
+
+          .element2_child1_item2::-webkit-scrollbar {
+            display: none;
+          }
+        }
+      }
+
+    }
+
+    .child2_item2 {
+      width: 400px;
+      height: 620px;
+      /* border: 1px solid red; */
+      border-radius: 8px;
+      background-image: linear-gradient(10deg, #66ffde50, white);
+      /* background-image: url("./asset/assest_05.png"); */
+      background-size: cover;
+      background-position: -140px;
+      overflow-y: scroll;
+
+      .day_5_forecast{
+        width: 366px;
+        height: 260px;
+        /* border: 1px solid red; */
+        background-image: linear-gradient(120deg, #0c71e6, var(--element-color5));
+        border-radius: 8px;
+        margin: 20px auto;
+        transition: all .2s linear;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        div{
+          margin-bottom: 10px;
+
+          p{
+            color: white;
+
+            span{
+              font-size: 16px;
+
+            }
+          }
+        }
+
+        .day_5_logo{
+          width: 140px;
+          height: 140px;
+          /* border: 1px solid red; */
+
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .item2_element:hover {
+        transform: scale(.95);
+        cursor: pointer;
       }
     }
-  }
-  .child3::-webkit-scrollbar{
-    display: none;
+
+    .child2_item2::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
-
