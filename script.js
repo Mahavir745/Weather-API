@@ -87,6 +87,7 @@ function weatherforcast(lat, lon, Api_key) {
 function storeWeatherData(day1, day3, day3, day4, day5, day6, cityN) {
 
   hourlyUpdate.innerHTML = '';
+  days_5_container.innerHTML = ""
   cityname.innerHTML = cityN;
 
   let skyrep;
@@ -142,7 +143,7 @@ function storeWeatherData(day1, day3, day3, day4, day5, day6, cityN) {
     else if (skyrep === "clear sky") {
       img.src = "./asset/assest_01.png"
     }
-    else if (skyrep === "shower rain") {
+    else if (skyrep === "shower rain" || skyrep === "light rain") {
       img.src = "./asset/assest_10.png"
     }
     else if (skyrep === "rain") {

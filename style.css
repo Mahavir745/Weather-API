@@ -331,6 +331,8 @@ button:hover {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        transition: all .2s linear;
+        cursor: pointer;
 
         div{
           margin-bottom: 10px;
@@ -350,11 +352,16 @@ button:hover {
           height: 140px;
           /* border: 1px solid red; */
 
+
           img{
             width: 100%;
             height: 100%;
           }
         }
+      }
+      .day_5_forecast:hover{
+        transform: scale(.96);
+
       }
 
       .item2_element:hover {
